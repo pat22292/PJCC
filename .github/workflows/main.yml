@@ -8,14 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@master
-#       with:
-#         args: --acl public-read --follow-symlinks --delete
-#       env:
-#         apiURL: ${{ secrets.apiURL }}
     steps:
-      - name: Git checkout
-        env:
-          apiURL: ${{ secrets.apiURL }}
+    - uses: actions/checkout@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        apiURL: ${{ secrets.apiURL }}
+
 
