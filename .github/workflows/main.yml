@@ -1,4 +1,4 @@
-name: Upload Website
+name: Set Environment Variables
 
 on:
   push:
