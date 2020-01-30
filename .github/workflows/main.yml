@@ -16,17 +16,8 @@ jobs:
 #         apiURL: ${{ secrets.apiURL }}
     steps:
       - name: Git checkout
-        uses: actions/checkout@v2
-
-      - name: Use Node 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
-      - name: Install Dependencies (prod)
-        run: yarn install --frozen-lockfile --production
-        
+        with: 
+          apiURL: ${{ secrets.apiURL }}
         env:
-          CI: true
           apiURL: ${{ secrets.apiURL }}
 
