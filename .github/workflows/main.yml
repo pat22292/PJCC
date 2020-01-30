@@ -16,8 +16,6 @@ jobs:
 #         apiURL: ${{ secrets.apiURL }}
     steps:
       - name: Git checkout
-        with: 
-          apiURL: ${{ secrets.apiURL }}
         env:
           apiURL: ${{ secrets.apiURL }}
 
