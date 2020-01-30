@@ -1,1 +1,5 @@
-
+steps:
+  - name: My first action
+    env:
+      apiURL: ${{ secrets.apiURL }}
+   
